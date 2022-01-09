@@ -33,7 +33,7 @@ button.dropdown-menu:hover{
 
 div.dropdown-menu {
     position: absolute;
-    left: calc(100% - 4.5rem);
+    z-index: 1;
     top: calc(100% + .4rem);
     color: black;
     background: white;
@@ -43,21 +43,23 @@ div.dropdown-menu {
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .3);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
+    pointer-events: none;
 }
 
 div.dropdown-menu > ul > li{
     margin-bottom: 0.5rem;
 }
 
-div.dropdown-menu > ul > li > a{
+div.dropdown-menu a, div.dropdown-menu button{
     all: unset;
 }
 
-div.dropdown-menu > ul > li > a:hover{
+div.dropdown-menu a:hover, div.dropdown-menu button:hover{
     cursor: pointer;
     text-decoration: underline;
 }
 
-.active {
+.active, .dropdown-menu > .dropdown-menu:hover {
     opacity: 1 !important;
+    pointer-events: auto !important;
 }
