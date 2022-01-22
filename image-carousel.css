@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+.img-carousel{
+    background: white;
+    width: 30rem;
+}
+
+.img-carousel-img{
+    width: 100%;
+}
+
+.img-carousel-controls{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: gray;
+}
+
+.img-carousel-ease{
+    opacity: 0;
+    animation: img-carousel-fade 5s ease-in-out infinite;
+}
+
+@keyframes img-carousel-fade{
+    0% {opacity: 0;}
+    15% {opacity: 1;}
+    90% {opacity: 1;}
+    98% {opacity: 0;}
+}
