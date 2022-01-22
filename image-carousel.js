@@ -19,7 +19,7 @@
     }
 
 */
-const imgCaro = function imageCarousel(imgArray, container = document.body) {
+export default function imageCarousel(imgArray, container = document.body) {
   const uiContainer = document.createElement('div');
   uiContainer.classList.add('img-carousel');
 
@@ -82,10 +82,4 @@ const imgCaro = function imageCarousel(imgArray, container = document.body) {
   setInterval(() => {
     updateElm();
   }, 5000);
-};
-
-// demo
-imgCaro(['https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260', 'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260', 'https://images.pexels.com/photos/209037/pexels-photo-209037.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260', 'https://images.pexels.com/photos/979247/pexels-photo-979247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']);
-imgCaro(['example.webp']);
-
-export default imgCaro;
+}

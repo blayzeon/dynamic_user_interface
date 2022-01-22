@@ -24,7 +24,7 @@
       * Example: ['Services']
 */
 
-const menus = function generateDropDownMenus(dArray, lArray, limit = ['none'], container = document.body) {
+export default function generateDropDownMenus(dArray, lArray, limit = ['none'], container = document.body) {
   const dropdownUl = document.createElement('ul');
   dropdownUl.classList.add('dropdown-menu');
 
@@ -110,13 +110,4 @@ const menus = function generateDropDownMenus(dArray, lArray, limit = ['none'], c
       dropdown.classList.remove('active');
     });
   });
-};
-
-// *** DEMO *** //
-const dArrayDemo = [['<a href="#" "target="_blank">This is a link.</a>', '<button>This is a button.</button>', 'This is just text without a tag.'], ['These options are created with nested arrays.', 'You can add as many options as you would like.', 'Or as few as you would like.', 'This is this line is on index [1][3].'], ['The array items can be any length.']];
-const lArrayDemo = [['Services', 'shopping_cart'], ['Contact', 'question_answer'], ['Account', 'account_circle'], 'Services', 'Contact', 'Account', 'Services', 'Contact', 'Account'];
-menus(dArrayDemo, lArrayDemo, [3, 'menu']);
-
-export default menus;
-
-// * end of module * //
+}
